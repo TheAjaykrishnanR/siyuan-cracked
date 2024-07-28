@@ -1,0 +1,5 @@
+{
+	"devDependencies": {
+		"electron": "v31.2.1"
+	}
+}

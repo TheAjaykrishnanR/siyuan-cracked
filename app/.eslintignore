@@ -1,0 +1,7 @@
+build
+dist
+node_modules
+public
+src/asset/pdf
+stage
+appearance

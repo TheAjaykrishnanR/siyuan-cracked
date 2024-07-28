@@ -1,0 +1,109 @@
+.protyle {
+  &-toolbar {
+    background-color: var(--b3-theme-background);
+    z-index: 4; // https://ld246.com/article/1697096086017
+    position: fixed;
+    box-shadow: var(--b3-point-shadow);
+    border-radius: var(--b3-border-radius);
+    display: flex;
+    transition: top .15s cubic-bezier(0, 0, .2, 1) 0ms;
+
+    &__item {
+      color: var(--b3-theme-on-surface);
+      border: 0;
+      background-color: transparent;
+      height: 29px;
+      box-sizing: border-box;
+      font-size: 10px;
+      white-space: nowrap;
+      padding: 1px 6px;
+
+      &:focus {
+        outline: none;
+      }
+
+      svg {
+        fill: currentColor;
+        display: inline-block;
+        stroke-width: 0;
+        stroke: currentColor;
+        width: 14px;
+        height: 14px;
+      }
+
+      &--current {
+        color: var(--b3-theme-primary);
+      }
+
+      &:hover {
+        background-color: var(--b3-theme-surface-lighter);
+      }
+
+      &:first-child {
+        border-radius: var(--b3-border-radius) 0 0 var(--b3-border-radius);
+      }
+
+      &:last-child {
+        border-radius: 0 var(--b3-border-radius) var(--b3-border-radius) 0;
+      }
+    }
+
+    &__divider {
+      border-left: 1px solid var(--b3-theme-surface-lighter);
+      margin: 6px 4px;
+    }
+  }
+
+  &-hint {
+    position: fixed;
+    border-radius: var(--b3-border-radius-b);
+    box-shadow: var(--b3-dialog-shadow);
+    border: 1px solid var(--b3-theme-surface-lighter);
+    background-color: var(--b3-menu-background);
+    z-index: 5;
+    overflow: auto;
+    max-height: 402px;
+    // 不能使用，否则 hint emoji 出现双滚动条 box-sizing: border-box;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-util {
+    position: fixed;
+    border-radius: var(--b3-border-radius-b);
+    box-shadow: var(--b3-dialog-shadow);
+    border: 1px solid var(--b3-theme-surface-lighter);
+    background-color: var(--b3-menu-background);
+    padding: 8px 0;
+    max-height: 80vh;
+    z-index: 4;
+    box-sizing: border-box;
+
+    &--mobile {
+      top: 0;
+      left: 0;
+      width: 100vw;
+    }
+  }
+
+  &-font {
+    font-size: 12px;
+    padding: 4px 8px;
+
+    &__style {
+      background-color: transparent;
+      margin-right: 4px;
+      transition: var(--b3-transition);
+      padding: 0 4px;
+      border-radius: var(--b3-border-radius);
+      border: 1px solid transparent;
+      color: var(--b3-theme-on-background);
+      white-space: nowrap;
+
+      &:hover {
+        border-color: var(--b3-theme-surface-lighter);
+      }
+    }
+  }
+}

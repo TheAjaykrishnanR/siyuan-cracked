@@ -1,0 +1,53 @@
+@import "util/mixin";
+@import "component/tooltips";
+@import "component/typography";
+@import "protyle/wysiwyg";
+@import "protyle/attr";
+@import "util/function";
+@import "business/history";
+@import "component/button";
+@import "component/select";
+@import "component/switch";
+@import "component/slider";
+@import "component/text-field";
+
+.protyle-wysiwyg a,
+.b3-typography a {
+  color: var(--b3-protyle-inline-link-color);
+  cursor: pointer;
+  transition: var(--b3-transition);
+}
+
+svg {
+  fill: currentColor;
+  display: inline-block;
+}
+
+.protyle-wysiwyg [data-node-id].iframe:hover .protyle-action__drag {
+  display: none;
+}
+
+.b3-typography,
+.protyle-wysiwyg .table[data-node-id] {
+  table {
+    display: table;
+  }
+}
+
+@media print {
+  // 尽量避免块内分页
+  .protyle-wysiwyg [data-node-id] {
+    &[data-type=NodeAudio],
+    &.render-node[data-type=NodeCodeBlock],
+    &[data-type=NodeHeading],
+    &[data-type=NodeIFrame],
+    &[data-type=NodeMathBlock],
+    &[data-type=NodeParagraph],
+    &[data-type=NodeThematicBreak],
+    &[data-type=NodeVideo],
+    &[data-type=NodeWidget],
+    .img {
+      break-inside: avoid;
+    }
+  }
+}
