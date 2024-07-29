@@ -58,9 +58,9 @@ export const needSubscribe .. {
 - `golang`
 - `mingw64 -> gcc`
 
-`git clone https://github.com/siyuan-note/siyuan.git`
-
 ## TESTING:
+
+`git clone https://github.com/siyuan-note/siyuan.git`
 
 ### KERNEL
 
