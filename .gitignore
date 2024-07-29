@@ -12,6 +12,8 @@ node_modules
 app/node_modules
 app/stage/build
 app/build
+!app/build/win-cracked-unpacked.rar
+!app/build/siyuan-3.1.1-win-cracked.exe"
 app/kernel*
 ios
 pprof

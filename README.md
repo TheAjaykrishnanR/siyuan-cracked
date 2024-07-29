@@ -1,15 +1,15 @@
-# PATCHES: 
+## PATCHES: 
 
-## Publishing:
+### Publishing:
 
-- app/package.json -> scripts: dist -> changed ... -publish=never to -publish=always
+- `app/package.json -> scripts: dist -> changed ... -publish=never to -publish=always`
 
-## Subscription Crack:
+### Subscription Crack:
 
-- kernel/model/conf.go :
+- `kernel/model/conf.go` :
 
 (1)
-```
+```go
 func IsSubscriber() bool {
 	//u := Conf.GetUser()
 	//return nil != u && (-1 == u.UserSiYuanProExpireTime || 0 < u.UserSiYuanProExpireTime) && 0 == u.UserSiYuanSubscriptionStatus
@@ -19,7 +19,7 @@ func IsSubscriber() bool {
 ```
 
 (1)
-```
+```go
 func IsPaidUser() bool {
 	// S3/WebDAV data sync and backup are available for a fee https://github.com/siyuan-note/siyuan/issues/8780
 
@@ -37,9 +37,9 @@ func IsPaidUser() bool {
 }
 ```
 
-- app/src/util/needSubscribe.ts:
+- `app/src/util/needSubscribe.ts`:
 
-```
+```js
 export const needSubscribe .. {
 	...
 	//return true;
@@ -47,22 +47,22 @@ export const needSubscribe .. {
 }
 ```
 
-## Membership Icons (Crown) : iconVIP (app/appearance/icons/material/icon.js), SIYUAN_IMAGE_VIP (app/src/constants.ts)
+### Membership Icons (Crown) : iconVIP (app/appearance/icons/material/icon.js), SIYUAN_IMAGE_VIP (app/src/constants.ts)
 
-- Icon choice logic : app/src/config/account.ts
+- Icon choice logic : `app/src/config/account.ts`
  
-# REQUIREMENTS:
+## REQUIREMENTS:
 
-- node
-- pnpm : npm install -g pnpm@9.1.1
-- golang
-- mingw64 -> gcc
+- `node`
+- `pnpm : npm install -g pnpm@9.1.1`
+- `golang`
+- `mingw64 -> gcc`
 
 `git clone https://github.com/siyuan-note/siyuan.git`
 
-# TESTING:
+## TESTING:
 
-## KERNEL
+### KERNEL
 
 ```
 cd kernel
@@ -72,7 +72,7 @@ cd ../app/kernel
 ./SiYuan-Kernel.exe --wd=.. --mode=dev
 ```
 
-## UI
+### UI
 
 ```
 cd siyuan/app
@@ -85,5 +85,5 @@ pnpm run start
 ## Electron-Builder (For creating Windows Executables):
 
 ```
-pnpm run dist
+`pnpm run dist`
 ```
