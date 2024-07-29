@@ -79,11 +79,10 @@ cd siyuan/app
 echo "run either dev or build"
 pnpm run dev -> webview compilation (shitty pdf preview page) 
 pnpm run build -> webview compilation (good pdf prewiew page)
-pnpm run start 
-```  
-
-## Electron-Builder (For creating Windows Executables):
+pnpm run start   
+```
+### Electron-Builder (For creating Windows Executables):
 
 ```
-`pnpm run dist`
+pnpm run dist
 ```
