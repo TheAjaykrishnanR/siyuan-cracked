@@ -18,7 +18,7 @@ func IsSubscriber() bool {
 
 ```
 
-(1)
+(2)
 ```go
 func IsPaidUser() bool {
 	// S3/WebDAV data sync and backup are available for a fee https://github.com/siyuan-note/siyuan/issues/8780
